@@ -1,0 +1,34 @@
+{
+  "name": "treinamento-node-mean-fundamental",
+  "version": "1.0.0",
+  "description": "Treinamento web - Numen IT",
+  "main": "'src/index.js'",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node --presets es2015,stage-2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lacerdaeduardo/treinamento-node-mean-fundamental.git"
+  },
+  "keywords": [
+    "node",
+    "mean",
+    "fundamental-ui",
+    "angular",
+    "sap"
+  ],
+  "author": "Eduardo Lacerda",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lacerdaeduardo/treinamento-node-mean-fundamental/issues"
+  },
+  "homepage": "https://github.com/lacerdaeduardo/treinamento-node-mean-fundamental#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.18.3"
+  }
+}
