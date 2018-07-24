@@ -7,3 +7,4 @@ coverage
 
 dist
 /treinamento-web.db
+/src/app/public
