@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import productsRouter from './server/routes/products';
-
 import db from './server/db/db';
 
 const port = process.env.PORT || 3000;
