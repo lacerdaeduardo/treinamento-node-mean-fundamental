@@ -1,0 +1,41 @@
+<div class="fd-container fd-container--centered">
+    <div class="fd-action-bar">
+        <div class="fd-action-bar__header">
+            <h1 class="fd-action-bar__title">
+                Products
+            </h1>
+            <p class="fd-action-bar__description">Product List </p>
+        </div>
+        <div class="fd-action-bar__actions">
+            <button class=" fd-button--primary fd-button--l">Button</button>
+        </div>
+    </div>
+    <div class="fd-tile docs-component docs-component__ fd-has-background-color-background-1">
+        <table class="fd-table">
+          <thead>
+            <th></th>
+            <th>
+              Brand
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Price
+            </th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of products">
+                  <td></td>
+                  <td>{{product.brand}}</td>
+                  <td>{{product.description}}</td>
+                  <td>{{product.price}}</td>
+                  <td class="sap-icon--edit"></td>
+                  <td class="sap-icon--delete"></td>
+                </tr>
+          </tbody>
+        </table>
+      </div>
+</div>
