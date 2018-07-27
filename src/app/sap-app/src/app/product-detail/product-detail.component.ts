@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,7 +15,8 @@ export class ProductDetailComponent implements OnInit {
   constructor(
     private productService:ProductService,
     private location:Location,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.start();
@@ -35,9 +36,17 @@ export class ProductDetailComponent implements OnInit {
     this.productService.getProduct(id).subscribe(product => this.product = product);
   }
 
-  save(){
-    console.log(this.product);
-    this.location.back();
+  save(){    
+    if (this.action == 'C'){
+      this.productService.addProduct(this.product).subscribe(p => 
+        this.router.navigate(['products'])
+      );
+    }else{
+      this.productService.updateProduct(this.product).subscribe(p => 
+        this.router.navigate(['products'])
+      );
+    }
+
   }
 
   @Input() product: Product;

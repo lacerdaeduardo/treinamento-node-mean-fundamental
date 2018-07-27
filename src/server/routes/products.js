@@ -66,7 +66,7 @@ router.put('/products/:id', (req, res) => {
 
         product.findOne({_id: id}, (err, product) => {
             if (err) {
-                sendError(req, err);
+                sendError(res, err);
             } else {
                 product.price = body.price;
                 product.brand = body.brand;
