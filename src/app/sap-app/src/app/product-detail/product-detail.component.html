@@ -1,0 +1,40 @@
+<div class="fd-container fd-container--centered">
+  <div class="fd-action-bar">
+    <div class="fd-action-bar__header">
+      <h1 class="fd-action-bar__title">
+        Product: <span *ngIf="product">{{product.brand}}</span>
+      </h1>
+    </div>
+  </div>
+
+  <div class="fd-form__set">
+    <div class="fd-form__item">
+      <label class="fd-form__label is-required" for="brandInput">Brand</label>
+      <input class="fd-form__control" type="text" id="brandInput" placeholder="Product brand"
+      [(ngModel)]="product.brand">
+    </div>
+  </div>
+
+  <div class="fd-form__set">
+    <div class="fd-form__item">
+      <label class="fd-form__label is-required" for="descriptionInput">Description</label>
+      <input class="fd-form__control" type="text" id="descriptionInput" placeholder="Product description"
+      [(ngModel)]="product.description">
+    </div>
+  </div>
+
+  <div class="fd-form__set">
+    <div class="fd-form__item">
+      <label class="fd-form__label is-required" for="priceInput">Price</label>
+      <input class="fd-form__control" type="number" id="priceInput" placeholder="Product price"
+      [(ngModel)]="product.price">
+    </div>
+  </div>
+
+  <div class="fd-form__set">
+    <div class="fd-form__item">
+        <button class="fd-button--positive" (click)="save()">Save</button>
+    </div>
+  </div>
+
+</div>
