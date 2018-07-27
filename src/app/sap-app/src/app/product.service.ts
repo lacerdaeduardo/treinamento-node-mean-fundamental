@@ -28,10 +28,14 @@ export class ProductService {
   }
   updateProduct(product:Product): Observable<Product>{
     return this.http.put<Product>(`${this.url}/${product._id}`, product, httpOptions).pipe(
+      tap((p: Product) => console.log(`updated id=${p._id}`)),
+      catchError(this.handleError<Product>('addProduct')));
+  }
+  deleteProduct(product:Product): Observable<Product>{
+    return this.http.delete<Product>(`${this.url}/${product._id}`).pipe(
       tap((p: Product) => console.log(`added id=${p._id}`)),
       catchError(this.handleError<Product>('addProduct')));
   }
-
   /**
  * Handle Http operation that failed.
  * Let the app continue.
